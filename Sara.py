@@ -91,7 +91,8 @@ if run_analysis:
             st.subheader("📊 Statistical Reports")
             col1, col2 = st.columns(2)
             
-            with col1:f km2_land > 0:
+            with col1:
+                if km2_land > 0:
                     st.error(f"🏜️ Polluted Land Area: {km2_land:.4f} km²")
                 else:
                     st.success("🏜️ Land Area: Safe. No oil pollution detected inside the drawn area.")
